@@ -49,7 +49,7 @@ someRouter.get('/', (req: Request, res: Response) => {
     res.status(200).json({z: req.query, count: state})
 });
 someRouter.get('/y', (req: Request, res: Response) => {
-    res.status(200).json({z: 12})
+    res.status(200).json({z: 112})
 });
 
 app.use('/x', someRouter);
