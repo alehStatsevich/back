@@ -22,7 +22,7 @@ app.use(function (req, res, next) {
     next();
 });
 ///////////////////////////
-var fakeState = {
+var state = {
     elementsForBasket: [],
     elements: [
         {
@@ -48,7 +48,7 @@ var fakeState = {
 };
 var someRouter = express_1.default.Router();
 someRouter.get('/', function (req, res) {
-    res.status(200).json({ z: req.query, count: fakeState });
+    res.status(200).json({ z: req.query, count: state });
 });
 someRouter.get('/y', function (req, res) {
     res.status(200).json({ z: 2 });
@@ -57,4 +57,8 @@ app.use('/x', someRouter);
 app.listen(process.env.PORT, function () {
     console.log('Neko-back listening on port: ' + process.env.PORT);
 });
+/////////////////////////////////////
+// ссылка на heroku
+// https://shrouded-chamber-55555.herokuapp.com/
+/////////////////////////////////////
 //# sourceMappingURL=index.js.map

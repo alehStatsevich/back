@@ -49,7 +49,7 @@ someRouter.get('/', (req: Request, res: Response) => {
     res.status(200).json({z: req.query, count: state})
 });
 someRouter.get('/y', (req: Request, res: Response) => {
-    res.status(200).json({z: 2})
+    res.status(200).json({z: 12})
 });
 
 app.use('/x', someRouter);
@@ -59,6 +59,5 @@ app.listen(process.env.PORT, () => {
 });
 /////////////////////////////////////
 // ссылка на heroku
-// https://blooming-journey-50727.herokuapp.com/
 // https://shrouded-chamber-55555.herokuapp.com/
 /////////////////////////////////////
